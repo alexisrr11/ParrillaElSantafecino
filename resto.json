@@ -1,0 +1,142 @@
+[
+  {
+    "categoria": "cortes",
+    "nombre": "Tira de Asado",
+    "descripcion": "Corte clásico argentino, jugoso y tierno, cocinado lentamente a la parrilla.",
+    "precio": 5500,
+    "imagen": "http://www.primeranota.cl/web/wp-content/uploads/2018/10/asado-de-tira-1024x682.jpg"
+  },
+  {
+    "categoria": "cortes",
+    "nombre": "Vacío",
+    "descripcion": "Corte magro con sabor intenso, ideal para amantes de la carne.",
+    "precio": 5800,
+    "imagen": "https://mui.kitchen/__export/1678474962842/sites/muikitchen/img/2023/03/10/15_a.jpg_554688468.jpg"
+  },
+  {
+    "categoria": "cortes",
+    "nombre": "Bife de chorizo",
+    "descripcion": "Corte grueso y jugoso, uno de los más populares en parrillas argentinas.",
+    "precio": 6200,
+    "imagen": "https://fitreceitas.com.br/wp-content/uploads/2022/03/Bife-aprimentado.jpg"
+  },
+  {
+    "categoria": "cortes",
+    "nombre": "Matambre",
+    "descripcion": "Matambre asado cubierto con salsa de tomate, jamón y queso gratinado.",
+    "precio": 6400,
+    "imagen": "https://static.esnota.com/uploads/2024/03/go4h8Z1w0_1200x630__1-828x548.jpg"
+  },
+  {
+    "categoria": "cortes",
+    "nombre": "Costilla",
+    "descripcion": "Costilla jugosa con hueso, cocinada lentamente a la parrilla para un sabor intenso.",
+    "precio": 5900,
+    "imagen": "https://img-global.cpcdn.com/recipes/e1aef700a63122f9/1200x630cq70/photo.jpg"
+  },
+  {
+    "categoria": "achuras",
+    "nombre": "Chorizo",
+    "descripcion": "Clásico embutido de carne de cerdo y vaca, condimentado y asado a la parrilla.",
+    "precio": 1200,
+    "imagen": "https://as1.ftcdn.net/v2/jpg/00/20/94/90/1000_F_20949018_tumamgufIsAzzUCXGSDyHvYSaZqPNw67.jpg"
+  },
+  {
+    "categoria": "achuras",
+    "nombre": "Morcilla",
+    "descripcion": "Embutido a base de sangre de cerdo y especias, suave y cremoso.",
+    "precio": 1100,
+    "imagen": "https://mui.kitchen/__export/1664403592797/sites/muikitchen/img/2022/09/28/moriclla_vegana_-_el_pais_1.jpg_554688468.jpg"
+  },
+  {
+    "categoria": "achuras",
+    "nombre": "Provoleta",
+    "descripcion": "Queso provolone asado, con orégano y un toque de aceite de oliva.",
+    "precio": 1500,
+    "imagen": "https://www.bairesgourmet.com/dobyt/contenido/noticias/original/1736773888.jpeg"
+  },
+  {
+    "categoria": "achuras",
+    "nombre": "Mollejas",
+    "descripcion": "Achura tierna y delicada, crocante por fuera y suave por dentro.",
+    "precio": 2500,
+    "imagen": "https://media.diariouno.com.ar/p/e5e0941fec0049e32e0a0c1f4aa5282b/adjuntos/298/imagenes/009/345/0009345175/1200x0/smart/asado-mollejas2jpg.jpg"
+  },
+  {
+    "categoria": "achuras",
+    "nombre": "Riñones",
+    "descripcion": "Riñones de res marinados y asados a fuego lento para realzar su sabor.",
+    "precio": 2000,
+    "imagen": "https://img-global.cpcdn.com/recipes/0540210b0eca74fb/1200x630cq70/photo.jpg"
+  },
+  {
+    "categoria": "guarniciones",
+    "nombre": "Papas fritas",
+    "descripcion": "Crocantes por fuera, suaves por dentro, servidas calientes.",
+    "precio": 1500,
+    "imagen": "https://cocina-casera.com/wp-content/uploads/2023/01/patatas-fritas-crujientes-francesa-1.jpg"
+  },
+  {
+    "categoria": "guarniciones",
+    "nombre": "Ensalada mixta",
+    "descripcion": "Clásica combinación de lechuga, tomate y cebolla, fresca y liviana.",
+    "precio": 1300,
+    "imagen": "https://assets.unileversolutions.com/recipes-v2/243135.jpg"
+  },
+  {
+    "categoria": "guarniciones",
+    "nombre": "Papas al horno",
+    "descripcion": "Papas doradas al horno con hierbas y aceite de oliva.",
+    "precio": 1600,
+    "imagen": "https://i.pinimg.com/originals/12/0b/24/120b2406fbfdb16782b2b8794ea425d7.jpg"
+  },
+  {
+    "categoria": "guarniciones",
+    "nombre": "Provoleta con orégano",
+    "descripcion": "Queso provolone fundido, con orégano y un toque de aceite de oliva.",
+    "precio": 1800,
+    "imagen": "https://imag.bonviveur.com/provoleta-con-un-tenedor.jpg"
+  },
+  {
+    "categoria": "guarniciones",
+    "nombre": "Puré de papas",
+    "descripcion": "Cremoso puré de papas con manteca y leche.",
+    "precio": 1400,
+    "imagen": "https://encolombia.com/wp-content/uploads/2021/02/Como-preparar-pure-de-papa.jpg"
+  },
+  {
+    "categoria": "bebidas",
+    "nombre": "Coca-Cola 500ml",
+    "descripcion": "Bebida gaseosa fría.",
+    "precio": 800,
+    "imagen": "https://images-cdn.ubuy.co.in/6350f3dd88e36a5511783026-coca-cola-original-bottle-500ml-pack-of.jpg"
+  },
+  {
+    "categoria": "bebidas",
+    "nombre": "Agua mineral 500ml",
+    "descripcion": "Agua mineral natural sin gas.",
+    "precio": 600,
+    "imagen": "https://www.varanda.com.br/media/catalog/product/cache/1/image/1200x/9df78eab33525d08d6e5fb8d27136e95/a/g/agua-mineral-crystal-500ml-7894900530001.jpg"
+  },
+  {
+    "categoria": "bebidas",
+    "nombre": "Cerveza Quilmes 500ml",
+    "descripcion": "Cerveza rubia argentina, sabor suave y refrescante.",
+    "precio": 1200,
+    "imagen": "https://media.danmurphys.com.au/dmo/product/732314-1.png"
+  },
+  {
+    "categoria": "bebidas",
+    "nombre": "Vino Malbec 750ml",
+    "descripcion": "Vino tinto argentino, intenso y aromático.",
+    "precio": 4200,
+    "imagen": "https://i5.walmartimages.com/asr/5a4637fd-98b5-4cb8-bdbb-4d4f32bd8b5d_1.050deea639a14710045f36c39056ca0a.jpeg"
+  },
+  {
+    "categoria": "bebidas",
+    "nombre": "Vino Cabernet Sauvignon 750ml",
+    "descripcion": "Vino tinto con notas a frutos rojos y especias.",
+    "precio": 4500,
+    "imagen": "https://www.elpalaciodehierro.com/on/demandware.static/-/Sites-palacio-master-catalog/default/dw69574a2b/images/773868/large/773868_x1.jpg"
+  }
+]

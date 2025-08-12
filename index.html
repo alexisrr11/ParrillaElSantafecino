@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Parrila "El Santafecino"</title>
+  <script type="module" src="./index.js"></script>
+  <script type="module" src="./cart.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Tailwind config quick tweak
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#b91c1c',
+            accent: '#f97316'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    /* Small print-friendly tweaks */
+    @media print {
+
+      header,
+      .controls,
+      .filter-nav {
+        display: none
+      }
+
+      .catalog {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .card {
+        page-break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+
+<body class="bg-gray-100 text-gray-800 font-sans">
+  <header class="bg-white shadow sticky top-0 z-20 bg-[url('https://www.steakburger.es/wp-content/uploads/2020/02/restaurante-parrilla-steak-burger.jpg')] bg-cover bg-center">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-white font-bold">SF</div>
+        <div>
+          <h1 class="text-xl font-semibold text-white">"El Santafecino"</h1>
+          <p class="text-sm text-gray-500">Parilla</p>
+        </div>
+      </div>
+
+      <div class="controls flex flex-col sm:flex-row items-stretch sm:items-center gap-2 w-full sm:w-auto">
+        <input id="search" type="search" placeholder="Buscar plato, ingrediente..."
+          class="flex-1 px-3 py-2 border rounded-md min-w-0 focus:outline-none focus:ring-2 focus:ring-accent" />
+        <button id="btn-cart"
+          class="text-xl p-2 rounded-full bg-orange-50 border-2 border-accent flex-shrink-0 self-end sm:self-auto">🛒</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-4 py-6">
+    <!-- filtros / categorías -->
+    <nav class="filter-nav mb-6 flex flex-wrap gap-2">
+      <button data-cat="all"
+        class="btn-cat px-3 py-2 rounded-md bg-primary text-gray-800 border border-gray-200">Todos</button>
+      <button data-cat="cortes" class="btn-cat px-3 py-2 rounded-md bg-white border">Cortes de carne</button>
+      <button data-cat="achuras" class="btn-cat px-3 py-2 rounded-md bg-white border">Achuras</button>
+      <button data-cat="guarniciones" class="btn-cat px-3 py-2 rounded-md bg-white border">Guarniciones</button>
+      <button data-cat="bebidas" class="btn-cat px-3 py-2 rounded-md bg-white border">Bebidas</button>
+    </nav>
+
+    <!-- catálogo -->
+    <section id="catalogo" class="catalog grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6"></section>
+  </main>
+
+  <!-- Modal detalle -->
+  <div id="modal" class="fixed inset-0 bg-black/40 hidden items-center justify-center z-50 p-4">
+    <div class="bg-white rounded-xl max-w-2xl w-full shadow-lg overflow-hidden">
+      <div class="p-4 flex items-start gap-4">
+        <img id="modalImg" src="" alt="" class="w-36 h-24 object-cover rounded-md" />
+        <div class="flex-1">
+          <h3 id="modalTitle" class="text-xl font-semibold"></h3>
+          <p id="modalDesc" class="text-gray-600 mt-1"></p>
+          <div id="modalPrice" class="text-2xl font-bold mt-4"></div>
+        </div>
+        <button id="closeModal" class="ml-2 text-gray-500">✕</button>
+      </div>
+      <div class="p-4 border-t flex justify-end gap-3">
+        <button id="modalClose2" class="px-4 py-2 border rounded-md">Cerrar</button>
+      </div>
+    </div>
+  </div>
+
+    <!-- Modal carrito -->
+  <div id="modal-cart" class="fixed inset-0 bg-black/40 hidden items-center justify-center z-50 p-4">
+    <div class="bg-white rounded-xl max-w-2xl w-full shadow-lg overflow-hidden">
+      <div class="p-4 flex items-start gap-4">
+        <h3 class="text-xl font-semibold flex-1">Carrito</h3>
+        <button id="closeModalCart" class="ml-2 text-gray-500">✕</button>
+      </div>
+
+      <!-- Aquí irá la lista de productos del carrito -->
+      <div id="cartItems" class="p-4 space-y-2">
+        <p class="text-gray-500">Tu carrito está vacío</p>
+      </div>
+
+      <div class="p-4 border-t flex justify-end gap-3">
+        <button id="modalCartClose2" class="px-4 py-2 border rounded-md">Cerrar</button>
+        <button id="btnEnviarWhatsApp" class="p-1 rounded-md bg-accent text-white">Enviar a WhatsApp</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Botón de ChatBot -->
+  <div id="chatbotBtn" class="fixed bottom-6 right-6 bg-primary text-white p-3 rounded-full shadow-lg cursor-pointer">
+    💬
+  </div>
+
+  <!-- Ventana del ChatBot -->
+  <div id="chatbotWindow"
+    class="hidden fixed bottom-20 right-6 w-72 bg-white border rounded-lg shadow-lg flex flex-col">
+    <div class="bg-primary text-white px-4 py-2 rounded-t-lg">
+      <strong>Asistente del Menú</strong>
+    </div>
+    <div id="chatbotMessages" class="flex-1 p-3 space-y-2 overflow-y-auto text-sm">
+      <div class="bg-gray-100 p-2 rounded">Hola 👋 Pregúntame por cualquier plato y te diré su precio y cómo está
+        preparado.</div>
+    </div>
+    <div class="flex border-t">
+      <input id="chatbotInput" type="text" placeholder="Ej: milanesa"
+        class="flex-1 px-2 py-1 text-sm focus:outline-none" />
+      <button id="chatbotSend" class="px-3 bg-red-500 text-white text-sm">Enviar</button>
+    </div>
+  </div>
+
+  <footer class="p-5 text-xl text-gray-800 text-center">
+    <p>Todos los derechos reservados <a class="text-blue-500" href="https://alexisrr11.github.io/DevxisDesign/">Devxis
+        desing</a> 2025</p>
+  </footer>
+
+</body>
+
+</html>

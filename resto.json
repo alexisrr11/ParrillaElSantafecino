@@ -4,7 +4,7 @@
     "nombre": "Tira de Asado",
     "descripcion": "Corte clásico argentino, jugoso y tierno, cocinado lentamente a la parrilla.",
     "precio": 5500,
-    "imagen": "http://www.primeranota.cl/web/wp-content/uploads/2018/10/asado-de-tira-1024x682.jpg"
+    "imagen": "https://s3.amazonaws.com/arc-wordpress-client-uploads/infobae-wp/wp-content/uploads/2018/08/09173312/asado.jpg"
   },
   {
     "categoria": "cortes",
@@ -139,4 +139,5 @@
     "precio": 4500,
     "imagen": "https://www.elpalaciodehierro.com/on/demandware.static/-/Sites-palacio-master-catalog/default/dw69574a2b/images/773868/large/773868_x1.jpg"
   }
+
 ]
